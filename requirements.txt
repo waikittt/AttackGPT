@@ -1,7 +1,6 @@
 ﻿requests
 requests-oauthlib
 python-dotenv
-pycld2 @ https://github.com/aboSamoor/pycld2/zipball/e3ac86ed4d4902e912691c1531d0c5645382a726#sha256=7036eb6137cc182dfccee02c8fdfb9ebe5cb147c40508915b8503571f5beaf95
 textattack
 regex
 openai
