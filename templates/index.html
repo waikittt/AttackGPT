@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>AttackGPT - Home</title>
+        <meta charset="utf-8">
+
+        <!-- Enable touch zooming and ensure proper rendering on mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+    </head>
+
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark m-2 rounded">
+            <div class="container-fluid">
+                <a class="navbar-brand mx-5" href="{{ url_for('index') }}">AttackGPT</a>
+
+                <!-- Hamburger icon for navigation links on smaller screens -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible navigation bar -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-5 active">
+                            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                        </li>
+                        <li class="nav-item mx-5">
+                            <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                        </li>
+                        <li class="nav-item mx-5">
+                            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Input form -->
+        <div class="text-center mt-4">
+            <img src="{{ url_for('static', filename='logo.png') }}" width="15%" height="12%" class="rounded">
+        </div>
+
+        <div class="container mt-4">
+            <h2 class="d-flex justify-content-center"> Perform Adversarial Attack on GPT-3.5 Text Prompts </h2>
+
+            <!-- Form to enter text -->            
+            <h2 class="mx-5 mt-5 border-bottom pb-3 border-primary ">Our Bias Attack</h2>    
+
+            <form action="{{ url_for('results') }}" method="GET">
+                <div class="form-group">
+                    <label for="inputText" class="form-label"></label>
+                    <input required class="form-control p-4" type="text" id="inputText" name="oriInput" minlength="10" maxlength="200"
+                        placeholder="Enter text to attack here (10 - 200 characters)">
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <button id="biasAttack-button" class="btn btn-lg bg-primary text-light mt-4 mb-5" type="submit">Attack</button>
+                </div>
+            </form>
+        </div>
+
+
+        <form action="{{ url_for('results2') }}" method="GET">
+            <h2 class="mx-5 mt-3 mb-5 border-bottom pb-3 border-primary ">TextAttack Attack Recipes</h2>            
+
+            <div class="row mx-5 mb-3">
+                <label class="col-3 col-form-label col-form-label-lg" for="DeepWordBug">Prompt</label>
+                <div class="col-9">
+                    <select class="form-select form-select-md" name="prompt">     
+                            <option disabled>Select</option>        
+                            <option value="20">what composer used sound mass</option>
+                            <option value="21">where did the persian war take place</option>
+                            <option value="22">what are add ons</option>
+                            <option value="23">how does a dredge work?</option>
+                            <option value="24">what classes are considered humanities</option>
+                            <option value="25">where are colors on stoplight</option>
+                            <option value="26">who is flo from progressive</option>
+                            <option value="27">what happened to george o'malley on grey's anatomy?</option>
+                            <option value="28">what makes of the united states</option>
+                            <option value="29">what is atherosclerotic heart disease</option>
+                            <option value="30">how are antibodies used in</option>
+                            <option value="31">what does the president of the usa do</option>
+                            <option value="32">what is reagan known for</option>
+                            <option value="33">how do forensic auditors examine financial reporting</option>
+                            <option value="34">What is Ischemia or infarction?</option>
+                            <option value="35">What is the significance of Good Friday?</option>
+                            <option value="36">what are warehouse spreadsheets used for</option>
+                            <option value="37">what is middle class in the us</option>
+                            <option value="38">What happened during the Starving Time in Jamestown?</option>
+                            <option value="39">how many percent is a basis point</option> 
+
+                            <option value="0">Historical P/E ratios of small-cap vs. large-cap stocks?</option>
+                            <option value="1">Should you co-sign a personal loan for a friend/family member? Why/why not?</option>
+                            <option value="2">Should I avoid credit card use to improve our debt-to-income ratio?</option>
+                            <option value="3">Difference between 'split and redemption' of shares and dividend</option>
+                            <option value="4">Pros & cons of investing in gold vs. platinum?</option>    
+                            <option value="5">Pros and Cons of Interest Only Loans</option>
+                            <option value="6">For a car loan, how much should I get preapproved for?</option>
+                            <option value="7">Where can I lookup accurate current exchange rates for consumers?</option>
+                            <option value="8">T-mobile stock: difference between TMUSP vs TMUS</option>
+                            <option value="9">Money transfer from Australia to India - avoid receiving ends service tax</option>
+                            <option value="10">Why does the Brexit cause a fall in crude oil prices?</option>
+                            <option value="11">Buying a house, how much should my down payment be?</option>
+                            <option value="12">What is the ticker symbol for “Vanguard Target Retirement 2045 Trust Plus”?</option>
+                            <option value="13">incorrect printed information on check stock</option>
+                            <option value="14">Is there any US bank that does not charge for incoming wire transfers?</option>
+                            <option value="15">When do companies typically announce stock splits?</option>
+                            <option value="16">Why is company provided health insurance tax free, but individual health insurance is not?</option>
+                            <option value="17">Unemployment Insurance Through Options</option>
+                            <option value="18">2 401k's and a SEP-IRA</option>
+                            <option value="19">Bid price… sudden Drop</option>                                                                                   
+                    </select>
+                </div>
+            </div>
+                <div class="row mx-5 mb-3">
+                    <label class="col-3 col-form-label col-form-label-lg" for="DeepWordBug">Attack Recipe</label>
+                    <div class="col-9">
+                        <select class="form-select form-select-md" name="attack">
+                                <option disabled>Select</option>
+                                <option value="dwb">DeepWordBug</option>
+                                <option value="tb">TextBugger</option>
+                                <option value="tf">TextFooler</option>
+                                <option value="cl">CheckList</option>                        
+                        </select>
+                </div>
+            </div>
+            <div class="row mx-5">
+                <div class="col-8"></div>
+                <div class="col-4 text-end">
+                    <p>*Please note that some perturbed texts may be the same as the original text, as it depends on how well the attack worked.</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button id="textAttack-button" class="btn btn-lg bg-primary text-light" type="submit">Attack</button>
+            </div>            
+        </form>
+
+        <!-- Attack Confirmation Modal -->
+        <div id="attack" class="modal fade mt-5" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Attack Commencing</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>The attack process is initiated. Please wait for the results.</p>
+                    </div>            
+                </div>
+            </div>
+        </div>
+
+        <!-- Steps to perform attack -->
+        <div class="container-fluid">
+            <div class="col w-100">
+                <div class="mx-5">                    
+                    <div class="mt-5 display-6"><b><u>Walkthrough:</u></b></div>    
+
+                    <div class="card bg-light mx-3 mt-4 mb-2 w-75 border border-success border-2 rounded-lg">            
+                        <div class="card-body">
+                            <h5 class="medium"><span class="text-danger">1.</span> Two methods to choose the text to be attacked: </h5>
+                            <div class="mx-4 mt-3">
+                                <h4 class="small">(A) Enter the text in the input box ➡ <u>Our Bias Attack </u></h4>   
+                                <div class="mx-4 mb-3">
+                                    <h4 class="small">~ Focus on 4 aspects - Gender, Race, Religion, Sexuality</h4>  
+                                </div> 
+                                <h4 class="small">(B) Select a text from the drop-down list ➡ <u>Attack Recipes from TextAttack</u></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-light mx-3 mb-2 w-75 border border-success border-2 rounded-lg">            
+                        <div class="card-body">
+                            <h5 class="medium "><span class="text-danger">2.</span> Click the ‘Attack' button to create perturbations of the original text.</h5>                
+                        </div>
+                    </div>
+                    <div class="card bg-light mx-3 mb-2 w-75 border border-success border-2 rounded-lg">            
+                        <div class="card-body ">
+                            <h5 class="medium "><span class="text-danger">3.</span> The original text and the perturbed text will be used as prompts for ChatGPT, and the generated answers for both texts will be displayed.
+                            </h5>                
+                        </div>
+                    </div>
+                    <div class="card bg-light mx-3 mb-2 w-75 border border-success border-2 rounded-lg">            
+                        <div class="card-body">
+                            <h5 class="medium"><span class="text-danger">4.</span> The performance of the attack is measured based on:</h5>      
+            
+                            <div class="mx-4 mt-3">
+                                <h4 class="small">(A) The <u>PROBABILITY</u> of each answer being generated by Human or AI.</h4>    
+                                <div class="mx-5 mb-3">
+                                    <h5 class="small">~ The probabilities will only be shown if the answers for both prompts are at least 50 words long.</h4>
+                                </div>      
+                                <h4 class="small">(B) The <u>SIMILARITY</u> percentage between the two answers.</h4>     
+                                <div class="mt-4"> 
+                                    <h4 class="small">(Bias attack only) The <u>BIAS SCORE</u> and <u>SENTIMENT</u> for both answers.</h4>        
+                                </div>  
+                            </div>                           
+                        </div>
+                    </div>                    
+                    <div class="card bg-light mx-3 mb-2 w-75 border border-success border-2 rounded-lg">            
+                        <div class="card-body">
+                            <h5 class="medium "><span class="text-danger">5.</span> Click the ‘Attack New Text’ button to perform a new attack.</h5>                
+                        </div>
+                    </div>                    
+                    <div class="card bg-light mx-3 mb-4 w-75 border border-success border-2 rounded-lg">            
+                        <div class="card-body">
+                            <h5 class="medium "><span class="text-danger">(Optional)</span> Click the ‘Download Results’ button to download the results as a .html file.</h5>       
+                            
+                            <div class="mx-4 mt-3">
+                                <h4 class="small">(A) The downloaded file will be named as downloaded_results.html.</h4>                                   
+                                <h4 class="small">(B) View the results by opening the html file in a web browser.</h4>                     
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                // When the download button is clicked
+                document.getElementById('biasAttack-button').addEventListener('click', function(){
+                    var text = document.getElementById('inputText').value;
+                    if (text.length >= 10 && text.length <= 200) {
+                        $('#attack').modal('show');
+                    } else {
+                        alert("Please enter a text between 10 to 200 characters.");
+                    }                                             
+                });
+                document.getElementById('textAttack-button').addEventListener('click', function(){
+                    $('#attack').modal('show');                                
+                });
+            });
+        </script>
+        
+        <!-- Bootstrap JS file to enable Bootstrap's interactive components. -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+
+</html>

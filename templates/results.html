@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>AttackGPT - Results</title>
+        <meta charset="utf-8">
+
+        <!-- Enable touch zooming and ensure proper rendering on mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+    </head>
+
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark m-2 rounded">
+            <div class="container-fluid">
+                <a class="navbar-brand mx-5" href="{{ url_for('index') }}">AttackGPT</a>
+
+                <!-- Hamburger icon for navigation links on smaller screens -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible navigation bar -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-5 active">
+                            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                        </li>
+                        <li class="nav-item mx-5">
+                            <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                        </li>
+                        <li class="nav-item mx-5">
+                            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mt-5">
+            <!-- Original -->
+            <div class="row mb-3"><h2><u>Original Text</u></h2></div>
+            <div class="row bg-light rounded">
+                <span id="oriText">{{ oriText }} </span>
+            </div>
+
+            <h4 class="d-flex justify-content-center mt-4 mb-3">ChatGPT Generated Answer</h4>
+            <div class="row bg-light rounded">
+                <span id="oriAnswer">{{ oriAnswer }}</span>
+            </div>
+
+            <div class="d-flex justify-content-center mt-4 mb-3">
+                <span id="oriProb"><b>{{ oriPossible }}</b> to be AI-generated. </span>                
+            </div>
+            
+            <div class="progress">
+                <div id="or_progress" class="progress-bar bg-success" role="progressbar" style="width: 50%"
+                    aria-valuenow="{{ oriProgress }}" aria-valuemin="0" aria-valuemax="100"> 
+                    <span id="oriProbVal">{{ oriProgress }}% AI</span>
+                </div>                    
+            </div>
+            <div class="progress mt-3">
+                <div id="or_progress2" class="progress-bar bg-secondary" role="progressbar" style="width: 50%"
+                    aria-valuenow="{{ oriProgress2 }}" aria-valuemin="0" aria-valuemax="100">    
+                    <span id="oriProbVal2">{{ oriProgress2 }}% Human</span>                 
+                </div>                                    
+            </div>
+            
+            <h3 class="d-flex justify-content-center mt-4 mb-3 text-danger"><u>Bias</u></h3>
+            <div class="progress mt-3">
+                <div id="or_progress3" class="progress-bar bg-warning" role="progressbar" style="width: 50%"
+                    aria-valuenow="{{ oriProgress3 }}" aria-valuemin="0" aria-valuemax="100">
+                    <span id="oribiasVal" class="text-dark">{{ oriProgress3 }}% Biased</span>
+                </div>            
+            </div>
+            <div class="d-flex justify-content-center mt-4 mb-3">
+                <span id="oriSentiment"><b>Sentiment (For answer):</b> {{ oriSentiment }} </span>                
+            </div>
+                
+
+            <!-- Perturbed -->
+            <div class="row mt-5 mb-3"><h2><u>Perturbed Text</u></h2></div>
+            <div class="row bg-light rounded">
+                <span id="perturbText"> {{ perturbText }} </span>
+            </div>
+
+            <h4 class="d-flex justify-content-center mt-4 mb-3">ChatGPT Generated Answer</h4>
+            <div class="row bg-light">
+                <span id="oriAnswer">{{ perturbAnswer }}</span>
+            </div>  
+
+            <div class="d-flex justify-content-center mt-4 mb-3">
+                <span id="perturbProb"><b>{{ perturbPossible }}</b> to be AI-generated. </span>
+            </div>
+
+            <div class="progress">
+                <div id="pt_progress" class="progress-bar bg-success" role="progressbar" style="width: 70%"
+                    aria-valuenow="{{ perturbProgress }}" aria-valuemin="0" aria-valuemax="100"> 
+                    <span id="perturbProbVal">{{ perturbProgress }}% AI</span>
+                </div>                    
+            </div>
+            <div class="progress mt-3">
+                <div id="pt_progress2" class="progress-bar bg-secondary" role="progressbar" style="width: 70%"
+                    aria-valuenow="{{ perturbProgress2 }}" aria-valuemin="0" aria-valuemax="100">                     
+                <span id="perturbProbVal2">{{ perturbProgress2 }}% Human</span>
+                </div>                                    
+            </div>
+
+            <h3 class="d-flex justify-content-center mt-4 mb-3 text-danger"><u>Bias</u></h3>
+            <div class="progress mt-3">
+                <div id="pt_progress3" class="progress-bar bg-warning" role="progressbar" style="width: 50%"
+                    aria-valuenow="{{ perturbProgress3 }}" aria-valuemin="0" aria-valuemax="100">
+                    <span id="perturbBiasVal" class="text-dark">{{ perturbProgress3 }}% Biased</span>
+                </div>            
+            </div>
+            <div class="d-flex justify-content-center mt-4 mb-5">
+                <span id="perturbSentiment"><b>Sentiment (For answer):</b> {{ perturbSentiment }} </span>                
+            </div>
+
+            <!-- Answer Too Short -->
+            <div class="d-flex justify-content-center mt-5 mb-5">
+                <span id="answerShort" style="font-size: xx-large; color:darkblue;"><b>{{ answerShort }}</b></span>
+            </div>            
+            
+            <!-- Similarities -->
+            <div class="row mb-3 text-danger"><h2>Answer Similarities</h2></div>
+
+            <div class="progress mb-3">
+                <div id="sim_progress" class="progress-bar bg-primary" role="progressbar" style="width: 0%" 
+                    aria-valuenow="{{ similarity }}" aria-valuemin="0" aria-valuemax="100" ></div>                    
+            </div>
+
+            <div class="text-center mt-4 mb-2" style="font-size: x-large">Generated answers are</div>
+            <div class="text-center mb-5" >
+                <b><span id="similarity">{{ similarity }}%</span> similar.</b>
+            </div>                    
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <!-- Download button -->
+                        
+            <form action="{{ url_for('download') }}" method="POST">
+                <input id="results_url" type="hidden" name="url" value="">
+                <button id="download-button" type="submit" class="btn btn-lg btn-secondary mx-3 mb-4">Download Results</button>
+            </form> 
+
+            <!-- New Attack button -->
+            <a href="{{ url_for('index') }}" role="button" class="btn btn-lg btn-info mx-3 mb-4">Perform New Attack</a>
+        </div>
+
+        <!-- Download Confirmation Modal -->
+        <div id="download" class="modal fade mt-5" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Download In Progress</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>The results will be downloaded to your device. Please wait a moment.</p>
+                    </div>            
+                </div>
+            </div>
+        </div>
+        
+        <script>  
+            // Update the original progress bar
+            var or_bar = document.getElementById('or_progress');
+            var or_possible = or_bar.getAttribute('aria-valuenow');
+            or_bar.style.width = or_possible + "%";
+
+            var or_bar2 = document.getElementById('or_progress2');
+            var or_possible2 = or_bar2.getAttribute('aria-valuenow');
+            or_bar2.style.width = or_possible2 + "%";
+
+            var or_bar3 = document.getElementById('or_progress3');
+            var or_bias = or_bar3.getAttribute('aria-valuenow');
+            or_bar3.style.width = or_bias + "%";
+
+            // Update the perturbed progress bar
+            var pt_bar = document.getElementById('pt_progress');
+            var pt_possible = pt_bar.getAttribute('aria-valuenow');            
+            pt_bar.style.width = pt_possible + "%";
+
+            var pt_bar2 = document.getElementById('pt_progress2');
+            var pt_possible2 = pt_bar2.getAttribute('aria-valuenow');
+            pt_bar2.style.width = pt_possible2 + "%";
+
+            var pt_bar3 = document.getElementById('pt_progress3');
+            var pt_bias = pt_bar3.getAttribute('aria-valuenow');
+            pt_bar3.style.width = pt_bias + "%";
+
+            // Update the similarity progress bar
+            var similar_bar = document.getElementById('sim_progress');
+            var similarity = similar_bar.getAttribute('aria-valuenow');            
+            similar_bar.style.width = similarity + "%";
+            
+            // Ensure code is not executed until the jQuery library has loaded
+            $(document).ready(function() {
+                // When the download button is clicked
+                document.getElementById('download-button').addEventListener('click', function(){
+                    $('#download').modal('show');
+
+                    // Get the current URL, and set it as the value of the hidden input field
+                    var currentURL = window.location.href;
+                    inputUrl = document.getElementById('results_url');
+                    inputUrl.value = currentURL;                               
+                });
+            });
+
+        </script>
+
+        <!-- Bootstrap JS file to enable Bootstrap's interactive components. -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>

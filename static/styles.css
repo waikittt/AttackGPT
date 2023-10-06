@@ -1,0 +1,12 @@
+body {
+    background-color: #d2e3f5;
+}
+
+.logo_contact {
+    position: fixed;
+    top: 30%;
+    left: 75%;
+    width: 20%;
+    height: 35%;
+    border-radius: 10px;
+}
