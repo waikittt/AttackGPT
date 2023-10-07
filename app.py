@@ -169,9 +169,8 @@ def results2():
                              oriProgress = ori_ai_percentage, oriProgress2 = ori_human_percentage,  \
                                   perturbProgress = pt_ai_percentage, perturbProgress2 = pt_human_percentage, answerShort = short)
 
-# if __name__ == '__main__':    
-#     app.run()
 
-def main():
+if __name__ == '__main__':    
     app.run()
+
     
