@@ -1,4 +1,5 @@
-﻿requests
+﻿gunicorn
+requests
 requests-oauthlib
 python-dotenv
 textattack
