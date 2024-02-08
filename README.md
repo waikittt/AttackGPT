@@ -3,13 +3,13 @@ AttackGPT is a web application designed to **explore the impacts of adversarial 
 robustness and reliability of ChatGPT**, an AI model designed for conversational interactions. 
 
 The application provides a user-friendly interface for 
--Prompt selection
--Attack execution
--Result analysis
+- Prompt selection
+- Attack execution
+- Result analysis
 
 2 different **types of attacks** can be performed: 
--Some existing attacks from the TextAttack framework
--A self-developed Bias Attack
+- 4 existing attacks from the TextAttack framework
+- A self-developed Bias Attack
 
 > This application was part of a final-year project which was collaboratively developed by a team of 3 students, guided by the expertise of 3 supervisors.
 
