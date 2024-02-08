@@ -11,6 +11,9 @@ The application provides a user-friendly interface for
 - 4 existing attacks from the TextAttack framework
 - A self-developed Bias Attack
 
+If you wish to learn more about the project methodologies and outcomes, refer to this file:
+[Project Report] (Final-Project-Report.pdf)
+
 ## Note:
 The implementation and evaluation of the adversarial attacks are not currently feasible since the API key for the GPT-3.5 model has expired. 
 
