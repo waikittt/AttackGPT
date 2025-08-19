@@ -12,7 +12,7 @@ The application provides a user-friendly interface for
 - A self-developed Bias Attack
 ---
 Step-by-step walkthrough of the web application:
-!(AttackGPT Web Application Walkthrough.png)
+!(/AttackGPT Web Application Walkthrough.png)
 
 To view an example of the attack results page, download this file and open it in a web browser:
 [Sample Attack Results](downloaded_results.html)
