@@ -11,6 +11,9 @@ The application provides a user-friendly interface for
 - 4 existing attacks from the TextAttack framework
 - A self-developed Bias Attack
 
+To view an example of the attack results page, download this file and open it in a web browser:
+[Sample Attack Results](downloaded_results.html)
+
 If you wish to learn more about the project methodologies and outcomes, refer to this file:
 [Final Project Report](Final-Project-Report.pdf)
 
