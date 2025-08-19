@@ -11,9 +11,12 @@ The application provides a user-friendly interface for
 - 4 existing attacks from the TextAttack framework
 - A self-developed Bias Attack
 ---
-### Step-by-step walkthrough of the web application: <br>
+### Step-by-step walkthrough of the web application: 
 ![Step-by-step walkthrough of the web application](Web-application-walkthrough.png)
 
+### Section to enter prompt and choose the type of attack to execute:
+![Section to enter prompt and choose the type of attack to execute](Choose-prompt-attack.png)
+---
 To view an example of the attack results page, download this file and open it in a web browser:
 [Sample Attack Results](downloaded_results.html)
 
@@ -23,4 +26,4 @@ If you wish to learn more about the project methodologies and outcomes, refer to
 ## Note:
 The implementation and evaluation of the adversarial attacks are not currently feasible since the API key for the GPT-3.5 model has expired. 
 
-> This application was part of a final-year project which was collaboratively developed by a team of 3 students, guided by the expertise of 3 supervisors.
+> This application was part of a final-year project, which was collaboratively developed by a team of 3 students, guided by the expertise of 3 supervisors.
