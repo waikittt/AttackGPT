@@ -16,7 +16,7 @@ The application provides a user-friendly interface for
 ![Step-by-step walkthrough of the web application](Web-application-walkthrough.png)
 
 ### Section to enter prompt and choose the type of attack to execute:
-![Section to enter prompt and choose the type of attack to execute](Choose-prompt-attack.png)
+![Enter prompt and choose type of attack](Choose-prompt-attack.png)
 
 ### Example of Text Attack result page:
 ![Text Attack result 1](text-attack-result-1.png)
