@@ -26,6 +26,9 @@ The application provides a user-friendly interface for
 To view an example of a Bias Attack result page, download this file and open it in a web browser:
 [Sample Attack Results](downloaded_results.html)
 
+Detailed user guides and test reports are provided in this file: 
+[User Guides and Test Report](User-guides-test-report.pdf)
+
 If you wish to learn more about the project methodologies and outcomes, refer to this file:
 [Final Project Report](Final-Project-Report.pdf)
 
