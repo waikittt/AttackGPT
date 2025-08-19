@@ -10,6 +10,9 @@ The application provides a user-friendly interface for
 2 different **types of attacks** can be performed: 
 - 4 existing attacks from the TextAttack framework
 - A self-developed Bias Attack
+---
+Step-by-step walkthrough of the web application:
+!(AttackGPT Web Application Walkthrough.png)
 
 To view an example of the attack results page, download this file and open it in a web browser:
 [Sample Attack Results](downloaded_results.html)
