@@ -11,7 +11,7 @@ The application provides a user-friendly interface for
 - 4 existing attacks from the TextAttack framework
 - A self-developed Bias Attack
 ---
-Step-by-step walkthrough of the web application: <br>
+## Step-by-step walkthrough of the web application: <br><br>
 ![Step-by-step walkthrough of the web application](Web-application-walkthrough.png)
 
 To view an example of the attack results page, download this file and open it in a web browser:
