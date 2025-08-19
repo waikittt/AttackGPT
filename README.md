@@ -10,6 +10,7 @@ The application provides a user-friendly interface for
 2 different **types of attacks** can be performed: 
 - 4 existing attacks from the TextAttack framework
 - A self-developed Bias Attack
+
 ---
 ### Step-by-step walkthrough of the web application: 
 ![Step-by-step walkthrough of the web application](Web-application-walkthrough.png)
@@ -20,6 +21,7 @@ The application provides a user-friendly interface for
 ### Example of Text Attack result page:
 ![Text Attack result 1](text-attack-result-1.png)
 ![Text Attack result 2](text-attack-result-2.png)
+
 ---
 To view an example of a Bias Attack result page, download this file and open it in a web browser:
 [Sample Attack Results](downloaded_results.html)
