@@ -12,6 +12,12 @@ The application provides a user-friendly interface for
 - A self-developed Bias Attack
 
 ---
+### Note:
+- The implementation and evaluation of the adversarial attacks are not currently feasible since the API key for the GPT-3.5 model has expired. 
+- This application was a key deliverable of a final-year project, developed collaboratively by a team of three students from Monash University Malaysia under the guidance of three supervisors.
+> Team Members: Koo Wai Kit, Samuel Tai Meng Yao, Tan Hui Thang\
+> Supervisors: Prof Raphaël Phan, Dr Sailaja Rajanala, Dr Arghya Pal
+---
 ### Step-by-Step Walkthrough of the Web Application: 
 ![Step-by-step walkthrough of the web application](Web-application-walkthrough.png)
 
@@ -31,8 +37,3 @@ Detailed user guides and test reports are provided in this file:
 
 If you wish to learn more about the project methodologies and outcomes, refer to this file:
 [Final Project Report](Final-Project-Report.pdf)
-
-## Note:
-The implementation and evaluation of the adversarial attacks are not currently feasible since the API key for the GPT-3.5 model has expired. 
-
-> This application was part of a final-year project, which was collaboratively developed by a team of 3 students, guided by the expertise of 3 supervisors.
